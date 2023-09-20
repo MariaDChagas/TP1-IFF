@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="teste.css">
+    <script src="teste.js"></script>
+</head>
+<body>
+    <script>
+        var y, x
+        x = prompt("Digite o valor inicial (ímpar): ")
+        while(x%2 == 0 || x <= 0){
+        x = prompt("Você não fez o que foi pedido.\nTente novamente: ")
+        }
+        y = prompt("Digite o valor final: ")
+        while(x > y){
+        y = prompt("O valor tem que ser maior que o primeiro.\nTente novamente: ")
+        }
+        alert("Você fez o que foi pedido.\nParabéns!")
+    </script>
+</body>
+</html>
