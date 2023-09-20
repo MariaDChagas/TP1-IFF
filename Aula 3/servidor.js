@@ -30,7 +30,7 @@ app.get('/menos', (req, res) => {
 
     res.send({ conta: result })
 })
-app.get('/multiplicação', (req, res) => {
+app.get('/mult', (req, res) => {
     console.log("n1=" + req.query.n1)
     console.log("n2=" + req.query.n2)
     result = parseFloat(req.query.n1) * parseFloat(req.query.n2)
@@ -42,7 +42,7 @@ app.get('/multiplicação', (req, res) => {
 
     res.send({ conta: result })
 })
-app.get('/divisão', (req, res) => {
+app.get('/div', (req, res) => {
     console.log("n1=" + req.query.n1)
     console.log("n2=" + req.query.n2)
     result = parseFloat(req.query.n1) / parseFloat(req.query.n2)
