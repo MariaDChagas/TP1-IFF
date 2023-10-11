@@ -15,10 +15,10 @@ app.get('/soma', (req, res) => {
     n2: req.query.n2,
     result: parseFloat(req.query.n1) + parseFloat(req.query.n2)
     }
-    if (isNaN(result)) {
-        result = "Valores inválidos."
+    if (isNaN(data.result)) {
+        data.result = "Valores inválidos."
     } else {
-        result = `${req.query.n1} + ${req.query.n2} = ${result}`
+        data.result = `${req.query.n1} + ${req.query.n2} = ${data.result}`
     }
     res.render("resul", { data })
 })
