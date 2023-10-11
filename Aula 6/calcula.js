@@ -1,0 +1,25 @@
+const express = require('express')
+const app = express()
+app.use(express.urlencoded({ extended: true }))
+app.use(express.json())
+
+app.set("view engine", "ejs")
+
+app.get('/', (request, response) => {
+    response.render('form')
+})
+
+app.get('/soma', (req, res) => {
+    const data = {
+    n1: req.query.n1,
+    n2: req.query.n2,
+    result: parseFloat(req.query.n1) + parseFloat(req.query.n2)
+    }
+    if (isNaN(result)) {
+        result = "Valores inválidos."
+    } else {
+        result = `${req.query.n1} + ${req.query.n2} = ${result}`
+    }
+    res.render("resul", { data })
+})
+app.listen(8080)
